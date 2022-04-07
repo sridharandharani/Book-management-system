@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="d-flex justify-content-center">Admin Dashboard</div>
+<div class="d-flex justify-content-center">Login Page</div>
+      <div class="container">
+          <div class="row">
+              <div class="col col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-6">
+                  <form action="/admindashboard" method="post">
+                      <table class="table">
+                          <tr>
+                              <td>Book Name</td>
+                              <td><input type="text" name="bname" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>Author</td>
+                              <td><input type="text" name="author" class="form-control"></td>
+                          </tr>
+                          <tr>
+                            <td>Category</td>
+                            <td><input type="text" name="category" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td><input type="text" name="price" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Publisher</td>
+                            <td><input type="text" name="publisher" class="form-control"></td>
+                        </tr>
+                          <tr>
+                              <td></td>
+                              <td><button type="submit" class="btn btn-primary">submit</button></td>
+                          </tr>
+                      </table>
+                  </form>
+              </div>
+          </div>
+      </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+      <div class="d-flex justify-content-center">View all </div>
+      <div class="container">
+          <div class="row">
+              {% for i in book %}
+              <div class="col col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://thumbs.dreamstime.com/z/book-icon-vector-design-library-symbol-web-graphic-jpg-ai-app-logo-object-flat-image-sign-eps-art-picture-stock-79808709.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Book Name : {{i[1]}}</h5>
+                      <p class="card-text">Author : {{i[2]}}</p>
+                      <p class="card-text">Category : {{i[3]}}</p>
+                      <p class="card-text">Price : {{i[4]}}</p>
+                      <p class="card-text">Publisher : {{i[5]}}</p>
+                    </div>
+                  </div>
+              </div>
+              {% endfor %}
+          </div>
+      </div>
+      {% endblock %}
