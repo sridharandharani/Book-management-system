@@ -97,7 +97,7 @@ def search():
 @books.route('/up', methods=['GET', 'POST'])
 def update():
     global getBookname
-    cursor = folder.cursor()
+    folder.cursor()
     if request.method == "POST":
         getBookname = request.form["bname"]
         return redirect('/update')
@@ -113,7 +113,7 @@ def updation():
         getPrice = request.form["price"]
         getPublisher = request.form["publisher"]
 
-        folder.execute("update mybook set name='"+getBookName+"',author='"+getAuthor+"',category='"+getCategory+"',price="+getPrice+",publisher='"+getPublisher+"'")
+        folder.execute("update mybook set name='"+getBookName+"',author='"+getAuthor+"',category='"+getCategory+"',price="+getPrice+",publisher='"+getPublisher+"' ")
         folder.commit()
         print("Updated Successfully......")
 
